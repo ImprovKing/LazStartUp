@@ -1,0 +1,262 @@
+body{
+    max-width : 1440px;
+    height : auto ;
+    margin: 0 auto 0 auto ;
+    display : flexbox ;
+    overflow-x : hidden ;
+    position: relative;
+}
+.header {
+    display: block;
+    width: 100%;
+    position: fixed;
+    height: 70px  ;
+    overflow: hidden;
+    z-index: 10;
+}
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+#sidebarMenu {
+    height: 100% !important;
+    position: fixed;
+    right: 0;
+    width: 80%;
+    margin-top: -10px ;
+    height: 100vh !important ;
+    z-index: 99;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+    background:#0e212b;
+    box-shadow : 1px 1px 3px #141414 , -1px -1px 2px #141414 ;
+    overflow-y: scroll;
+    display: block;
+}
+#backdrop{
+    background : #000 ;
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 80 ;
+    opacity: .2;
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: capitalize;
+    padding : 10px;
+    font-size: larger ;
+    font-weight: normal;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li:hover{
+    color : #0e212b;
+    background: #fff ;
+    box-shadow: 1px 1px 2px #141414 , -1px -1px 2px #141414;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0%);
+}
+
+input[type="checkbox"]:checked ~ #backdrop {
+    display : block ;
+    transition: all .3s; 
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 27px ;
+    top: 22px;
+    left: 22px;
+    border-radius : 10px ;
+}
+.sidebarIconToggle{
+    position: fixed;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius : 10px ;
+    height: 4px;
+    width: 100%;
+    background-color: #3894c6;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+.side-link{
+    display : block ;
+    position: absolute ;
+    right :5% ;
+    top: 22px;
+    z-index : 50 ;
+}
+.dash-img{
+    width : 30px;
+    heighT : 30px;
+    margin-right : 5px;
+}
+#inner-img2{
+    width : 27px;
+    height : 27px;
+    display: inline-block;
+}
+#inner-img2 img{
+    width : 100% ;
+    height : 100% ;
+    object-fit: contain;
+    object-position: 0%;
+}
+.side-link a{
+    padding : 8px 12px;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color :#fff;
+}
+.side-link a:hover{
+    color : #fff;
+    transform: scale(1.1);
+}
+.search-box{
+    display : block ;
+    cursor: pointer;
+    width : 150px;
+    height :50px;
+    margin : 5px auto 0 auto;
+}
+.search-box img{
+    width : 100% ;
+    height : 100% ;
+    object-fit: contain;
+    object-position: 0%;
+}
+input[type=search]{
+    height : 45px;
+}
+@media screen and (max-width : 1366px) {
+    body{
+        max-width : 1366px;
+    }
+    .header{
+        height : 55px !important ;
+    }
+}
+@media screen and (max-width : 1180px) {
+    .header{
+        height : 45px !important ;
+    }
+    .sidebarIconToggle , #inner-img2{
+        margin-top : -10px;
+        width : 30px;
+        height: 30px;
+    }
+}
+@media screen and (max-width : 700px) {
+    #sidebarMenu{
+        font-size: normal ;
+        height: 100vh;
+    }
+    .search-box{
+        margin-top : 10px;
+        width : 90px;
+        height : 30px;
+    }
+}
+@media screen and (max-width : 500px) {
+    .search-box{
+        text-align: left;
+        margin-left : 80px;
+    }
+}
+@media screen and (max-width : 400px) {
+    .header{
+        height : 30px;
+    }
+    .side-link a{
+        margin : 0;
+    }
+    #sidebarMenu .sidebarMenuInner li{
+        font-size: smaller;
+    }
+}
+@media screen and (max-width : 320px) {
+    .side-link{
+        right : 1px;
+    }
+    .search-box{
+        margin-top : 15px;
+        margin-left : 60px;
+        width : 60px;
+        heighT : 20px;
+    }
+    .sidebarIconToggle{
+        margin-left : -5px;
+    }
+    /* #sidebarMenu{
+        width :  ;
+    } */
+}

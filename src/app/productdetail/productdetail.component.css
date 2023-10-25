@@ -1,0 +1,270 @@
+main{
+    max-width : 1440px;
+    min-width : 320px;
+    height : auto;
+    margin: 0 auto 0 auto ;
+    position : relative ;
+    font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    list-style: none ;
+    text-decoration: none ;
+}
+.details{
+    display : block ;
+    width : 100% ;
+    height : 100% ;
+    text-align: none;
+}
+.det-main-cont{
+    display : block ;
+    margin: 10px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.det-img{
+    width : 53% !important;
+    height : 550px !important;
+    display : block ;
+}
+.det-img img{
+    width : 100% ;
+    height:  100% ;
+    object-fit: cover;
+    object-position: 0%;
+}
+.main-description{
+    font-size: large ;
+}
+.det-info{
+    width : 45% !important;
+    height: auto;
+    margin-bottom: 50px;
+    display: block ;
+    position: absolute;
+    text-align : left ;
+    right : 10px;
+    top: 10px;
+    padding : 5px;
+}
+.det-title{
+    color : #f7f7f9 ;
+    width: 100%;
+    text-align : left ;
+}
+.det-price{
+    position: absolute;
+    right : 10px;
+    top : 10px;
+    display :block ;
+}
+.btn-prod{
+    color : #fff ;
+    background :rgb(25, 125, 55);    
+    padding : 10px ;
+    border-radius : 10px;
+    display: block ;
+    text-transform: uppercase ;
+    text-align: center;
+    cursor: pointer;
+    width: 70% !important;
+    margin : 0 auto 0 auto ;
+    font-weight : bolder ;
+}
+.size {
+    margin-top : 5% ;
+    margin-bottom: 5% ;
+    display : block ;
+}
+#lab-1 ,#lab-2 , #lab-3{
+    place-content: center ;
+    border-radius: 50%;
+    width : 40px ;
+    text-align: center;
+    height: 40px; 
+}
+#one:checked ~ .size #lab-1 ,
+#two:checked ~ .size #lab-2 ,
+#three:checked ~ .size #lab-3{
+    color : #fff ;
+    background : #464e6b ;
+}
+
+input[type=radio]{
+    display : none ;
+}
+.qty{
+    width : 150px ;
+    display :block ;
+    margin-top : 5% ;
+    margin-bottom: 5% ;
+}
+.add{
+    margin: 10px;
+    padding : 10px;
+    width: 30px;
+    height: 30px;
+    font-weight : 600 ;
+    vertical-align: middle ;
+    border-radius: 10px ;
+    cursor: pointer ;
+    font-size: large;
+    color : rgb(138, 252, 138);
+}
+.main-description , .ship{
+    width : 100% ;
+    display :flexbox ;
+    text-transform : capitalize ;
+    padding : 5px;
+    height : auto ;
+}
+.pay-btn{
+    display : block ;
+    margin: 20px auto 20px auto ;
+    width : 50% ;
+}
+*{ box-sizing: border-box;}         /*specifies the behaviour of the dimension of the box */
+    .slider{                            /*styling for the slider container */
+        margin : 0 auto 0 auto ;
+        position : relative ;
+    }
+    .slider{            
+        margin-top : 30px;              /* specifying the actual slider but using the case sensitivity */        
+        width : auto;
+        padding : 10px ;
+        cursor :grab;
+        overflow: hidden;
+    }
+    .slides{
+        display:flex;
+        padding : 10px;
+        overflow-x: auto;
+        scrollbar-width: 300px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior:smooth;              /* specify whether to use native scrollin in ans overflowing element */
+    }
+    .slides::-webkit-scrollbar{width : 10px; height: 10px;}
+    .slides::-webkit-scrollbar-thumb{ background: transparent; border-radius: 10px;}
+    .slides::-webkit-scrollbar-track{ background : transparent;}
+    .slides > div{ 
+    flex-shrink: 0;         /* responsiible for shringking the contents*/
+    width : auto;          /* width of the card */
+    height: auto ;        /* height of th card */
+    margin-right: 20px;        
+    border-radius: 10px; 
+    transform: scale(1);            /* not necessary  but still valuable */
+    transition: ease 0.5s;          /* not necessary  but still valuable */ 
+    display: flex;              /* not necessary  but still valuable */
+    }
+    ::-webkit-scrollbar-thumb{
+        background: #fff;
+    }
+.product-card{
+    max-width : 230px ;
+    height : 300px;
+    display : flexbox ;
+    margin: 20px;
+    border-radius : 5px;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    cursor : pointer ;
+}.product-card:hover{
+    transform: scale(1.01,1.01);
+    transition: linear 1s;
+}
+.prod-img{
+    width : 100% ;
+    heighT: 70% ;
+    display : block ;
+    background : gray ;
+}
+.prod-info{
+    display : block ;
+    padding : 3px;
+}
+.prod-info div {
+    margin-top : 5px;
+    margin-bottom: 5px;
+}
+.prod-price{
+    font-weight: 400;
+    text-align: right ;
+}
+.View{
+    color : #fff;
+    padding : 8px;
+    cursor : pointer ;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top : 5px;
+    display : flexbox ;
+    width : 100% ;
+    background : #464e6b;
+    border-radius : 3px;
+}
+
+/* product card */
+
+  .slider{
+    height : auto ;
+    display : block ;
+  }
+  .head{
+    padding: 10px ;
+    font-size: large;
+  }
+@media screen and (max-width : 1024px){
+    body{
+        max-width : 1024px ;
+        height : auto ;
+    }
+    .btn-prod{
+        font-size:  smaller;
+    }
+}
+@media screen and (max-width : 900px) {
+    body{
+        max-width : 900px;
+        height : auto ;
+    }
+    .det-img{
+        width : 100% !important;
+        }
+    .det-info{
+        position: relative;
+        margin : 0;
+        width : 100% !important;
+        right : 0;
+        display : inline-block ;
+    }
+}
+@media screen and (max-width : 500px) {
+    body{
+        max-width : 500px;
+        height : auto ;
+    }
+    .row-cont{
+        width : 200px;
+        margin : 2px;
+      }
+    .det-img{
+        height : 400px;
+    }
+    .product-card{
+        width : 180px;
+    }
+}
+@media screen and (max-width : 320px) {
+    body{
+        max-width : 320px;
+        height : auto ;
+    }
+    .det-img{
+        height : 300px;
+    }
+    .add{
+        width: 20px ;
+        height: 0px ;
+    }
+    .product-grid .add-to-cart{
+        font-size: 4px;
+      }
+}

@@ -1,0 +1,259 @@
+.headshot{
+    width : 100% ;
+    height : 450px;
+  }
+  /* headshot slider */
+  *{
+    text-decoration: none;
+    list-style: none;
+    color : rgb(217, 216, 216);
+  }
+  .Categories{
+    width : 100% ;
+  }
+  #cat-h3{
+    position : absolute ;
+    font-weight: lighter;
+    letter-spacing: 2px ;
+  }
+  #img-cat-holder{
+    border-radius: 10px ;
+    width: auto;
+    height: 300px;
+  }
+  #img-cat-holder img{
+    width : 100% ;
+    border-radius: 10px ;
+    height : 100% ;
+    object-fit: cover;
+    object-position:  center ;
+  }
+  .images {
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .images-inner {
+    width: 500%;
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  }
+  .image-slide {
+    width: 20%;
+    float: left;
+  }
+  .image-slide,
+  .fake-radio,
+  .radio-btn {
+    transition: all 0.5s ease-out;
+  }
+  .fake-radio {
+    float: right;
+  }
+  .image-slide img{
+    width : 100% ;
+    height : 100% ;
+    object-fit: cover;
+    object-position: center;
+  }
+.radio{
+    display : none ;
+    visibility: hidden;
+}
+  
+  
+  /* Move product-c.product-cont overflowed container */
+  #slide1:checked ~ .images .images-inner {
+    margin-left: 0;
+  }
+  #slide2:checked ~ .images .images-inner {
+    margin-left: -100%;
+  }
+  #slide3:checked ~ .images .images-inner {
+    margin-left: -200%;
+  }
+  
+  
+  
+  
+  /* Color of bullets */
+  #slide1:checked ~ div .fake-radio .radio-btn:nth-child(1),
+  #slide2:checked ~ div .fake-radio .radio-btn:nth-child(2),
+  #slide3:checked ~ div .fake-radio .radio-btn:nth-child(3) {
+    background: red;
+  }
+  .radio-btn {
+    width: 9px;
+    height: 9px;
+    border-radius: 5px;
+    background: gray;
+    display: inline-block !important;
+    margin: 0 1px;
+    cursor: pointer;
+  }
+  /* Color of bullets - END */
+  
+  
+  
+  
+  /* Text of product-c.product-cont */
+  #slide1:checked ~ .labels .label:nth-child(1),
+  #slide2:checked ~ .labels .label:nth-child(2),
+  #slide3:checked ~ .labels .label:nth-child(3) {
+    opacity: 1;
+  }
+  
+  .label {
+    opacity: 0;
+    position: absolute;
+  }
+  /* Text of product-c.product-cont - END */
+  
+  
+  
+  /* Calculate AUTOPLAY for BULLETS */
+  @keyframes bullet {
+    0%, 33.32333333333334%	{
+      background: red;
+    }
+    33.333333333333336%, 100% {
+      background: gray;
+    }
+  }
+  
+  
+  #play1:checked ~ div .fake-radio .radio-btn:nth-child(1) {
+    animation: bullet 12300ms infinite -1000ms;
+  }
+  
+  #play1:checked ~ div .fake-radio .radio-btn:nth-child(2) {
+    animation: bullet 12300ms infinite 3100ms;	
+  }
+  
+  #play1:checked ~ div .fake-radio .radio-btn:nth-child(3) {
+    animation: bullet 12300ms infinite 7200ms;	
+  }
+  /* Calculate AUTOPLAY for BULLETS - END */
+  
+  
+  
+  
+  /* Calculate AUTOPLAY for product-c.product-cont */
+  @keyframes slide {
+    0%, 25.203252032520325%	{ margin-left: 0; }
+    33.333333333333336%, 58.53658536585366%	{ margin-left: -100%; }
+    66.66666666666667%, 91.869918699187%	{ margin-left: -200%; }
+  }
+  
+  
+  .st-slider > #play1:checked ~ .images .images-inner {
+    animation: slide 12300ms infinite;	
+  }
+  /* Calculate AUTOPLAY for product-c.product-cont - END */
+  .image-slide{
+    height :550px;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  
+  /* Calculate AUTOPLAY for CAPTION */
+  @keyframes caption {
+    0%, 33.32333333333334%	{
+      opacity: 1;
+    }
+    33.333333333333336%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  
+  #play1:checked ~ .labels .label:nth-child(1) {
+    animation: caption 12300ms infinite -1000ms;
+  }
+  
+  #play1:checked ~ .labels .label:nth-child(2) {
+    animation: caption 12300ms infinite 3100ms;	
+  }
+  
+  #play1:checked ~ .labels .label:nth-child(3) {
+    animation: caption 12300ms infinite 7200ms;	
+  }
+  /* Calculate AUTOPLAY for CAPTION - END */
+  /* Cloumn */
+  .column{
+    width : auto ;
+    display : flexbox ;
+    text-align: center ;
+    padding : 10px ;
+    margin-top: 50px ;
+  }
+  .column span{
+    display : inline-block ;
+    margin-right : 70px ;
+  }
+  #col-icon{
+    display : inline-block ;
+    width : 145px ;
+    height: 145px ;
+    object-fit: contain ; 
+    object-position: 0% ;
+  }
+
+ 
+/* product card */
+.proCard{
+  width: 250px ;
+  height: 350px ;
+  border-radius: 10px ;
+  color : #fff ;
+}
+.imgHolder{
+  width: 100% !important ;
+  height: 75% ;
+  display: block ;
+}
+.imgHolder img{
+  display: block ;
+  width: 100% ;
+  height: 100% ;
+  object-fit: cover ;
+  object-position: top center ;
+  border-top-right-radius: 10px ;
+  border-top-left-radius: 10px ;
+}
+.info{
+  text-align: center ;
+  padding : 10px ;
+}
+.title{
+  font-weight: 600 ;
+}
+.slides{
+  display:flex;
+  text-align: center;
+  padding : 5px ;
+  overflow-x: auto;
+  scrollbar-width: 300px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior:smooth;              /* specify whether to use native scrollin in ans overflowing element */
+}
+.slides::-webkit-scrollbar{width : 2px; height: 10px;}
+.slides::-webkit-scrollbar-thumb{ background: transparent;}
+.slides::-webkit-scrollbar-track{ background : transparent;}
+.slides > div{ 
+scroll-snap-align:center;   /* this is the main value scroll-snap-align which will align the contents to the center just like the carousel used in the portfolio */
+flex-shrink: 0;         /* responsiible for shringking the contents*/
+margin-right: 20px;        
+border-radius: 10px; 
+transform-origin: center;       /* not necessary  but still valuable */
+transform: scale(1);            /* not necessary  but still valuable */
+transition: ease 0.5s;          /* not necessary  but still valuable */ 
+position: center;           /* responsible for aligning the contents inside the cards */
+display: flex;              /* not necessary  but still valuable */
+justify-content: center;    /* responsible for aligning the contents inside the cards */
+align-items: center;       /* responsible for aligning the contents inside the cards */
+}

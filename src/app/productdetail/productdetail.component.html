@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<main>
+  <div class="details">
+    <div>
+    </div>
+    <div class="det-main-cont grid grid-cols-2 gap-6 sm:grid-cols-1 relative">
+      <div class="det-img " data-aos="zoom-in">
+        <img src={{Products?.image1}} alt='/' />
+      </div>
+      <div class="det-info">
+        <h3 class="det-title ">
+          {{Products?.name}}
+        </h3>
+        <h5 class="detprice"> <b class="text-green-600" > N </b> {{Products?.price}} </h5>
+        <span class="font-bold text-lighter text-white"> {{Products?.SKU}} </span>
+        <h6 class="text-base text-red-300 "> few units left </h6>
+        <br />
+        <span class="btn-prod">
+          Order now
+        </span>
+        <div class="main-description p-2"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+          distinctio quidem minima assumenda, laboriosam reprehenderit officiis soluta eum nostrum optio possimus
+          tenetur odit. Sapiente eos excepturi quaerat deserunt iste necessitatibus?</div>
+      </div>
+    </div>
+  </div><br />
+  <div>
+    <h4 class="p-3 "> Other Items </h4>
+
+    <div class="slider">
+      <div class="slides">
+        <div [routerLink]="['/product/details/', Others?.id]" *ngFor="let Others of Others" data-aos="zoom-in">
+          <div class="proCard">
+            <div class="imgHolder">
+              <img src={{Others?.image1}} alt='/' />
+            </div>
+            <div class="info">
+              <h4 class="title truncate">{{Others?.name}}</h4>
+              <div class="price">N {{Others?.price}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </main><br />
+    <app-footer></app-footer>

@@ -1,0 +1,99 @@
+.footer{
+    width : 100% ;
+    height : auto ;
+    display : block  ;
+    background-color: #0e212b;
+    padding: 10px;
+    color : #fff;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+.logo{
+    width: 200px !important ;
+    height : 200px ;
+}
+.logo img {
+    width: 100% ;
+    height: 100% ;
+    object-fit: contain ;
+    object-position: center ;
+}
+.link-cont{
+    height : auto;
+    padding : 10px;
+    width: auto;
+    display: inline-block;
+    margin-left : 300px;
+    margin-top : 30;
+}
+.left-menu ,.right-menu{
+    display : inline-block;
+    padding : 10px;
+    text-transform: capitalize;
+    margin : 10px;
+}
+.left-menu div,.right-menu div{
+    font-weight :300;
+    width : auto;
+    display : block ;
+    cursor: pointer;
+}
+
+.left-menu div:hover,.right-menu div:hover{
+    transform: translateX(2px);
+}
+.copyright{
+    text-transform: capitalize;
+    text-align: center;
+    width: 100% ;
+    font-weight: 200;
+    margin-top : 20px;
+}
+.copyright a{
+    text-decoration: none;
+    font-size: large;
+    color : rgb(83, 204, 83) ;
+}
+
+@media screen and (max-width : 900px) {
+    .footer{
+        max-width : 900px;
+    }
+    .link-cont{
+        margin-left: 200px;
+    }
+}
+@media screen and (max-width : 700px) {
+    .footer{
+        max-width: 700px;
+    }
+    .link-cont{
+        padding : 0;
+        margin-left : 200px;
+     }
+    .left-menu,.right-menu{
+        margin : 5px;
+        padding : 5px;
+    }
+    .copyright{
+        font-size: small;
+    }
+}
+@media screen and (max-width : 500px) {
+    .link-cont{
+        margin-left: 100px;
+    }
+    .foot-logo{
+        width : 150px;
+        heighT :150px;
+    }
+}
+@media screen and (max-widtH : 320px) {
+    .right-menu,.left-menu{
+        text-align: right;
+        justify-self: right;
+        display: block;
+        float: right;
+    }
+}

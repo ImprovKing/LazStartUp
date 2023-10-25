@@ -1,0 +1,136 @@
+<main>
+    <app-navbar></app-navbar>
+    <div class="headshot">
+        <div id="homepage-slider" class="st-slider">
+
+            <input type="radio" class="cs_anchor radio" name="slider" id="slide1" />
+            <input type="radio" class="cs_anchor radio" name="slider" id="slide2" />
+            <input type="radio" class="cs_anchor radio" name="slider" id="slide3" />
+            <input type="radio" class="cs_anchor radio" name="slider" id="play1" checked="" />
+
+            <div class="images">
+                <div class="images-inner">
+                    <div class="image-slide relative">
+                        <img id="head-img"
+                            src="https://images.pexels.com/photos/13288274/pexels-photo-13288274.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="/" />
+
+                            <div class="absolute right-10 bottom-10 text-brown-500 text-3xl ">
+                                Shop GREAT LAZ
+                            </div>
+                    </div>
+                    <div class="image-slide relative">
+                        <img id="head-img"
+                            src="https://images.pexels.com/photos/428340/pexels-photo-428340.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="/" />
+
+                            <div class="absolute right-10 bottom-10 text-black font-bold text-3xl border-2 p-10 border-black rounded-xl">
+                                Get cool wears 
+                            </div>
+                    </div>
+                    <div class="image-slide relative">
+                        <img id="head-img"
+                            src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="/" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br /><br /><br />
+    
+
+
+    <div class="p-6 mt-10 mb-10 relative"  >
+        <h4 class=""> New Arrivals </h4><br />
+
+        <span class="absolute right-10 top-5 text-base" routerLink='/newarrival/category/section/products/newarrival' > view all &rarr; </span>
+
+        <div class="slides" >
+            <div [routerLink]="['/product/details/', NewArrival?.id]" *ngFor="let NewArrival  of NewArrivals" data-aos="zoom-in">
+                <div class="proCard">
+                    <div class="imgHolder">
+                            <img src={{NewArrival?.image1}}
+                                alt='/' />
+                    </div>
+                    <div class="info">
+                        <h4 class="title truncate">{{NewArrival?.name}}</h4>
+                        <div class="price">N {{NewArrival?.price}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+        <div class="p-6 mb-10 relative">
+            <h4 class=""> Shirts </h4><br />
+
+            <span class="absolute right-10 top-5 text-base" routerLink='/shirts/category/section/products/shirts'> view all &rarr; </span>
+
+        
+            <div class="slides">
+                <div [routerLink]="['/product/details/', Shirt?.id]" *ngFor="let Shirt of Shirt " data-aos="zoom-in">
+                    <div class="proCard">
+                        <div class="imgHolder">
+                                <img src={{Shirt?.image1}}
+                                    alt='/' />
+                        </div>
+                        <div class="info">
+                            <h4 class="title truncate">{{Shirt?.name}}</h4>
+                            <div class="price">N {{Shirt?.price}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+    <div class="p-6 mb-10 relative">
+        <h4 class=""> Pants </h4><br />
+
+        <span class="absolute right-10 top-5 text-base " routerLink='/pants/category/section/products/pants'> view all &rarr; </span>
+
+    
+        <div class="slides">
+            <div [routerLink]="['/product/details/', Pants?.id]" *ngFor="let Pants of Pants" data-aos="zoom-in">
+                <div class="proCard">
+                    <div class="imgHolder">
+                            <img src={{Pants?.image1}}
+                                alt='/' />
+                    </div>
+                    <div class="info">
+                        <h4 class="title truncate">{{Pants?.name}}</h4>
+                        <div class="price">N {{Pants?.price}}</div>
+                    </div>
+                </div>
+            </div>         
+        </div>
+
+
+</div>
+
+<div class="p-6 mb-10 relative">
+    <h4 class=""> Others </h4><br />
+
+    <span class="absolute right-10 top-5 text-base" routerLink='/others/category/section/products/others'> view all &rarr; </span>
+
+
+    <div class="slides">
+        <div [routerLink]="['/product/details/', Others?.id]" *ngFor="let Others of Others" data-aos="zoom-in">
+            <div class="proCard">
+                <div class="imgHolder">
+                        <img src={{Others?.image1}}
+                            alt='/' />
+                </div>
+                <div class="info">
+                    <h4 class="title truncate">{{Others?.name}}</h4>
+                    <div class="price">N {{Others?.price}}</div>
+                </div>
+            </div>
+        </div>         
+    </div>
+
+
+</div>
+   
+<app-footer></app-footer>
+</main>

@@ -1,0 +1,12 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+.policy{
+    padding : 15px;
+    max-width : 1440px;
+    height : auto ;
+    margin: 0 auto 0 auto ;
+    position : relative ;
+}

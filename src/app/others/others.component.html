@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="pt-10 w-full">
+    <h3 class="p-2"> Others </h3>
+
+    <div class="p-2 text-base grid grid-cols-3 gap-4 sm:grid-cols-1 md:grid-cols-3">
+
+        <div [routerLink]="['/product/details/', Others?.id]" *ngFor="let Others of Others" data-aos="zoom-in">
+            <div class="proCard">
+                <div class="imgHolder">
+                        <img src={{Others?.image1}}
+                            alt='/' />
+                </div>
+                <div class="info">
+                    <h4 class="title truncate">{{Others?.name}}</h4>
+                    <div class="price">N {{Others?.price}}</div>
+                </div>
+            </div>
+        </div>  
+
+    </div><br /><br />
+
+</div>
+<app-footer></app-footer>

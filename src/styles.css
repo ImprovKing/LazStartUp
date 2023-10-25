@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(0, 0, 0) !important ; 
+  color : rgb(217, 216, 216) !important ;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	scroll-behavior: smooth ;
+}
+
+/* product card */
+.proCard{
+  width: 250px ;
+  height: 350px ;
+  border-radius: 10px ;
+  color : #fff ;
+}
+.imgHolder{
+  width: 100% !important ;
+  height: 80% ;
+  display: block ;
+}
+.imgHolder img{
+  display: block ;
+  width: 100% ;
+  height: 100% ;
+  object-fit: cover ;
+  object-position: top center ;
+  border-radius : 10px ;
+}
+.info{
+  text-align: center ;
+  padding : 10px ;
+}
+.title{
+  font-weight: 600 ;
+}
+.slides{
+  display:flex;
+  text-align: center;
+  padding : 5px ;
+  overflow-x: auto;
+  scrollbar-width: 300px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior:smooth;              /* specify whether to use native scrollin in ans overflowing element */
+}
+.slides::-webkit-scrollbar{width : 2px; height: 10px;}
+.slides::-webkit-scrollbar-thumb{ background: transparent;}
+.slides::-webkit-scrollbar-track{ background : transparent;}
+.slides > div{ 
+scroll-snap-align:center;   /* this is the main value scroll-snap-align which will align the contents to the center just like the carousel used in the portfolio */
+flex-shrink: 0;         /* responsiible for shringking the contents*/
+margin-right: 20px;        
+border-radius: 10px; 
+transform-origin: center;       /* not necessary  but still valuable */
+transform: scale(1);            /* not necessary  but still valuable */
+transition: ease 0.5s;          /* not necessary  but still valuable */ 
+position: center;           /* responsible for aligning the contents inside the cards */
+display: flex;              /* not necessary  but still valuable */
+justify-content: center;    /* responsible for aligning the contents inside the cards */
+align-items: center;       /* responsible for aligning the contents inside the cards */
+}
+
+@media screen and (max-width : 500px ) {
+  .proCard{
+    width: 300px;
+  }
+}
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~ngx-toastr/toastr-bs4-alert';
+@import '~ngx-toastr/toastr';
+@import '~ngx-toastr/toastr-bs4-alert';
+@import "~bootstrap/dist/css/bootstrap.css" ;
+ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
